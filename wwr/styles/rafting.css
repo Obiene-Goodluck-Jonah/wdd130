@@ -1,97 +1,167 @@
-:root {
-    --primary-color: #1b4965;
-    /* deep river blue */
-    --secondary-color: #5fa8d3;
-    /* soft blue */
-    --accent1-color: #bee9e8;
-    /* gentle aqua */
-    --accent2-color: #cae9ff;
-    /* light sky blue */
-
-    --heading-font: 'Georgia', serif;
-    --body-font: 'Roboto', sans-serif;
-}
-
-* {
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-    background-color: #f7f9fc;
+    background-color: #f5f5f5;
+    color: #222;
 }
 
 header,
-main,
 footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.hero {
-    position: relative;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
+    background-color: #1b4965;
+    color: white;
     text-align: center;
-    opacity: 0.9;
-    background-color: var(--accent2-color);
-    color: #003049;
-    /* navy text for contrast */
+    padding: 1rem 0;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 16px;
+header img {
+    height: 60px;
+}
+
+nav {
+    background-color: #144053;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Layout */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.contact-wrapper,
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.company-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
     color: #1b4965;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 16px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletter label {
+    font-weight: bold;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-section img {
-    width: 160px;
-    margin: 8px;
+.newsletter button {
+    background-color: #1b4965;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.newsletter button:hover {
+    background-color: #144053;
+}
+
+/* Grid Section */
+.grid-content div {
+    background-color: #fff;
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.grid-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer .socialmedia a img {
+    height: 24px;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
 }
